@@ -1,17 +1,20 @@
 const path = require("path");
 
 const aliasImporter = (aliases, options = {}) => {
-  const absoluteAliases = Object.keys(aliases).reduce((allAliases, alias) => {
-    allAliases[alias] = path.resolve(options.root || process.cwd(), aliases[alias]);
-    return allAliases;
-  }, {});
+  const aliasesDetails = Object.keys(aliases).map(alias => ({
+    alias,
+    path: path.resolve(options.root || process.cwd(), aliases[alias])
+  }));
   return (url, prev, done) => {
     let aliasFound = false;
-    Object.keys(aliases).forEach(alias => {
-      if (!aliasFound && url.split("/")[0] === alias) {
+    aliasesDetails.forEach(aliasDetails => {
+      if (!aliasFound && url.split("/")[0] === aliasDetails.alias) {
         aliasFound = true;
         done({
-          file: url.replace(alias, path.relative(prev, absoluteAliases[alias]).replace("../", ""))
+          file: url.replace(
+            aliasDetails.alias,
+            path.relative(prev, aliasDetails.path).replace("../", "")
+          )
         });
       }
     });
