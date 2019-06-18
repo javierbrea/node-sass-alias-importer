@@ -23,15 +23,14 @@ const sass = require("node-sass");
 const aliasImporter = require("node-sass-alias-importer");
 
 sass.render({
-  file: './src/components/foo/foo.scss',
-  importer: [      
-    importAlias({
+  file: "./src/components/foo/foo.scss",
+  importer: [
+    aliasImporter({
       themes: "./src/styles/themes",
       variables: "./src/styles/variables/index"
     })
   ]
 });
-
 ```
 
 Now you can use aliases for importing specific files, or as base paths in your `import` statements:
@@ -50,7 +49,7 @@ Now you can use aliases for importing specific files, or as base paths in your `
 
 `aliasImporter(aliases [,options])`
 * Arguments
-	* aliases - _`<Object>`_ Object containing aliases as keys, real paths as values.
+	* aliases - _`<Object>`_ Object containing aliases as keys, relative paths as values.
 	* options - _`<Object>`_
 		* root - _`<String>`_ Base path for all defined aliases. Default `process.cwd()`
 
@@ -63,7 +62,7 @@ const sassPlugin = require("rollup-plugin-sass");
 const sass = require("node-sass");
 const aliasImporter = require("node-sass-alias-importer");
 
-return {
+module.exports = {
   input: "src/index.js",
   output: {
     file: "dist/index.js"
@@ -73,16 +72,19 @@ return {
       insert: true,
       runtime: sass,
       options: {
-        importer: aliasImporter({
-          variables: "styles/variables/index"
-        }, {
-          root: "./src"
-        })
+        importer: aliasImporter(
+          {
+            themes: "themes",
+            variables: "variables/index"
+          },
+          {
+            root: "./src/styles"
+          }
+        )
       }
     })
   ]
 };
-
 ```
 
 ### Usage with Webpack
@@ -90,7 +92,7 @@ return {
 ```js
 const aliasImporter = require("node-sass-alias-importer");
 
-return {
+module.exports = () => ({
   entry: ["./src/index.js"],
   module: {
     rules: [
@@ -112,8 +114,7 @@ return {
       }
     ]
   }
-};
-
+});
 ```
 
 ## License
