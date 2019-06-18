@@ -25,6 +25,8 @@
   "scripts": {
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "lint": "eslint src",
+    "test": "mocha-sinon-chai --istanbul --include-all-sources --print=detail --mocha --recursive test",
+    "check-coverage": "msc-istanbul check-coverage --statements=100 --lines=100 --branches=100 --functions=100",
     "lint-staged": "lint-staged"
   },
   "devDependencies": {
@@ -34,6 +36,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "husky": "^1.3.1",
     "lint-staged": "^8.1.4",
+    "mocha-sinon-chai": "^3.0.0",
     "node-sass": "^4.12.0",
     "prettier": "^1.18.2"
   },
