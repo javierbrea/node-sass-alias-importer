@@ -1,8 +1,8 @@
 const path = require("path");
 
-const aliasImporter = aliases => {
+const aliasImporter = (aliases, options = {}) => {
   const absoluteAliases = Object.keys(aliases).reduce((allAliases, alias) => {
-    allAliases[alias] = path.resolve(process.cwd(), aliases[alias]);
+    allAliases[alias] = path.resolve(options.root || process.cwd(), aliases[alias]);
     return allAliases;
   }, {});
   return (url, prev, done) => {
