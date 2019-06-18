@@ -8,12 +8,12 @@ const aliasImporter = (aliases, options = {}) => {
   return (url, prev, done) => {
     let aliasFound = false;
     aliasesDetails.forEach(aliasDetails => {
-      if (!aliasFound && url.split("/")[0] === aliasDetails.alias) {
+      if (!aliasFound && url.split(path.sep)[0] === aliasDetails.alias) {
         aliasFound = true;
         done({
           file: url.replace(
             aliasDetails.alias,
-            path.relative(prev, aliasDetails.path).replace("../", "")
+            path.relative(prev, aliasDetails.path).replace(`..${path.sep}`, "")
           )
         });
       }
