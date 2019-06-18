@@ -6,7 +6,7 @@
 
 # Node Sass Alias Importer
 
-Node sass importer supporting paths aliases.
+Node sass importer supporting custom alias for directories or specific files.
 
 ## Install
 

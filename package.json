@@ -1,6 +1,6 @@
 {
   "name": "node-sass-alias-importer",
-  "description": "Node sass importer supporting paths aliases",
+  "description": "Node sass importer supporting custom alias for directories or specific files",
   "version": "1.0.0",
   "keywords": [
     "node-sass",
