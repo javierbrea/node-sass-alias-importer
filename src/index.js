@@ -8,7 +8,7 @@ const aliasImporter = (aliases, options = {}) => {
   return (url, prev, done) => {
     let aliasFound = false;
     Object.keys(aliases).forEach(alias => {
-      if (!aliasFound && url.indexOf(alias) === 0) {
+      if (!aliasFound && url.split("/")[0] === alias) {
         aliasFound = true;
         done({
           file: url.replace(alias, path.relative(prev, absoluteAliases[alias]).replace("../", ""))
