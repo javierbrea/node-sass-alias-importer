@@ -119,7 +119,7 @@ module.exports = () => ({
 
 ## License
 
-MIT, see [LICENSE.md](./LICENSE.md) for details.
+MIT, see [LICENSE](./LICENSE) for details.
 
 [coveralls-image]: https://coveralls.io/repos/github/javierbrea/node-sass-alias-importer/badge.svg
 [coveralls-url]: https://coveralls.io/github/javierbrea/node-sass-alias-importer
