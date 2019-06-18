@@ -50,6 +50,21 @@ test.describe("index", () => {
         });
       }
     );
+
+    test.it("should accept aliases with absolute paths", () => {
+      const importer = index({ themes: path.resolve(__dirname, "..", "src", "styles", "themes") });
+      return new Promise(resolve => {
+        importer(
+          "themes/foo-theme/index",
+          path.resolve(__dirname, "..", "src", "components", "foo", "foo.scss"),
+          resolve
+        );
+      }).then(result => {
+        return test.expect(result).to.deep.equal({
+          file: "../../styles/themes/foo-theme/index"
+        });
+      });
+    });
   });
 
   describe("when using root option", () => {

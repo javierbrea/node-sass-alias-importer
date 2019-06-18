@@ -49,7 +49,7 @@ Now you can use aliases for importing specific files, or as base paths in your `
 
 `aliasImporter(aliases [,options])`
 * Arguments
-	* aliases - _`<Object>`_ Object containing aliases as keys, relative paths as values.
+	* aliases - _`<Object>`_ Object containing aliases as keys, relative or absolute paths as values.
 	* options - _`<Object>`_
 		* root - _`<String>`_ Base path for all defined aliases. Default `process.cwd()`
 
