@@ -6,6 +6,8 @@
 
 # Node Sass Alias Importer
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/javierbrea/node-sass-alias-importer.svg)](https://greenkeeper.io/)
+
 Node sass importer supporting custom alias for directories or specific files.
 
 ## Install
