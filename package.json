@@ -1,7 +1,7 @@
 {
   "name": "node-sass-alias-importer",
   "description": "Node sass importer supporting custom alias for directories or specific files",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "node-sass",
     "sass",
@@ -27,6 +27,8 @@
     "lint": "eslint src",
     "test": "mocha-sinon-chai --istanbul --include-all-sources --print=detail --mocha --recursive test",
     "check-coverage": "msc-istanbul check-coverage --statements=100 --lines=100 --branches=100 --functions=100",
+    "test:coverage": "npm run test && npm run check-coverage",
+    "test:ci": "npm run test:coverage",
     "lint-staged": "lint-staged"
   },
   "devDependencies": {
