@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 ### BREAKING CHANGES
 
-## [1.0.2] - 2020-12-21
+## [1.0.1] - 2020-12-21
 ### Added
 - chore(ci): Run tests in Windows OS in pipeline
 
@@ -23,10 +23,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - fix: Define imports on Windows using also / as path separator (#22)
-
-## [1.0.1] - 2020-01-26
-### Changed
-- Update dependencies
 
 ## [1.0.0] - 2019-06-18
 ### Added
