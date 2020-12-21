@@ -17,7 +17,7 @@ test.describe("index", () => {
         importer("themes/foo-theme/index", path.resolve("src/components/foo/foo.scss"), resolve);
       }).then((result) => {
         return test.expect(result).to.deep.equal({
-          file: "../../styles/themes/foo-theme/index",
+          file: path.join("..", "..", "styles", "themes", "foo-theme", "index"),
         });
       });
     });
@@ -28,7 +28,7 @@ test.describe("index", () => {
         importer("variables", path.resolve("src/components/foo/foo.scss"), resolve);
       }).then((result) => {
         return test.expect(result).to.deep.equal({
-          file: "../../styles/variables/index",
+          file: path.join("..", "..", "styles", "variables", "index"),
         });
       });
     });
@@ -45,7 +45,7 @@ test.describe("index", () => {
           );
         }).then((result) => {
           return test.expect(result).to.deep.equal({
-            file: "variables-real-path/index",
+            file: path.join("variables-real-path", "index"),
           });
         });
       }
@@ -61,7 +61,7 @@ test.describe("index", () => {
         );
       }).then((result) => {
         return test.expect(result).to.deep.equal({
-          file: "../../styles/themes/foo-theme/index",
+          file: path.join("..", "..", "styles", "themes", "foo-theme", "index"),
         });
       });
     });
@@ -74,7 +74,7 @@ test.describe("index", () => {
         importer("themes/foo-theme/index", path.resolve("src/components/foo/foo.scss"), resolve);
       }).then((result) => {
         return test.expect(result).to.deep.equal({
-          file: "../../styles/themes/foo-theme/index",
+          file: path.join("..", "..", "styles", "themes", "foo-theme", "index"),
         });
       });
     });
