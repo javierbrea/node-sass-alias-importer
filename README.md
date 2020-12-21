@@ -6,8 +6,6 @@
 
 # Node Sass Alias Importer
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/javierbrea/node-sass-alias-importer.svg)](https://greenkeeper.io/)
-
 Node sass importer supporting custom alias for directories or specific files.
 
 ## Install
@@ -37,7 +35,7 @@ sass.render({
 
 Now you can use aliases for importing specific files, or as base paths in your `import` statements:
 
-```sass
+```
 // file: src/components/foo/foo.scss
 
 @import "themes/foo-theme/index";
