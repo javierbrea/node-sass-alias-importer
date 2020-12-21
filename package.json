@@ -29,6 +29,9 @@
     "test:unit": "npm run test && npm run check-coverage",
     "lint-staged": "lint-staged"
   },
+  "peerDependencies": {
+    "node-sass": "4.x"
+  },
   "devDependencies": {
     "eslint": "7.16.0",
     "eslint-config-prettier": "7.1.0",
