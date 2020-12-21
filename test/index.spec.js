@@ -34,7 +34,7 @@ test.describe("index", () => {
     });
 
     test.it(
-      "should not resolve alias when founds a file url with a path starting by alias",
+      "should not resolve alias when founds a file url with a path name only starting by alias",
       () => {
         const importer = index({ variables: "./src/styles/variables/index" });
         return new Promise((resolve) => {
@@ -45,7 +45,7 @@ test.describe("index", () => {
           );
         }).then((result) => {
           return test.expect(result).to.deep.equal({
-            file: path.join("variables-real-path", "index"),
+            file: "variables-real-path/index",
           });
         });
       }
