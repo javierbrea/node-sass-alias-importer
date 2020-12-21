@@ -23,7 +23,6 @@
   ],
   "main": "src/index.js",
   "scripts": {
-    "coveralls": "cat ./coverage/lcov.info | coveralls",
     "lint": "eslint src",
     "test": "mocha-sinon-chai --istanbul --include-all-sources --print=detail --mocha --recursive test",
     "check-coverage": "msc-istanbul check-coverage --statements=100 --lines=100 --branches=100 --functions=100",
@@ -32,7 +31,6 @@
     "lint-staged": "lint-staged"
   },
   "devDependencies": {
-    "coveralls": "3.0.9",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.10.0",
     "eslint-plugin-prettier": "3.1.2",
@@ -51,6 +49,6 @@
     }
   },
   "engines": {
-    "node": "10.x || 12.x || 13.x"
+    "node": "10.x || 12.x || 14.x || 15.x"
   }
 }
