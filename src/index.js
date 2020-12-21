@@ -13,9 +13,11 @@ const aliasImporter = (aliases, options = {}) => {
       if (!aliasFound && url.split(IMPORTS_PATH_SEP)[0] === aliasDetails.alias) {
         aliasFound = true;
         done({
-          file: url.replace(
-            aliasDetails.alias,
-            path.normalize(path.relative(prev, aliasDetails.path).replace(`..${path.sep}`, ""))
+          file: path.normalize(
+            url.replace(
+              aliasDetails.alias,
+              path.relative(prev, aliasDetails.path).replace(`..${path.sep}`, "")
+            )
           ),
         });
       }
