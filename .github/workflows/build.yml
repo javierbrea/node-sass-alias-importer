@@ -4,12 +4,14 @@ on:
     branches:
       - main
       - release
+      - fix-22-windows-paths
   pull_request:
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.os}}
     strategy:
       matrix:
+        os: ["ubuntu-latest", "windows-2019"]
         node: ["12.19.0", "14.15.0", "15.2.0"]
     steps:
       - name: Checkout
@@ -40,18 +42,10 @@ jobs:
         run: npm run lint
       - name: Test unit
         run: npm run test:unit
-      - name: Test mutation
-        run: npm run test:mutation
-        env:
-          BRANCH_NAME: ${{ steps.extract-branch.outputs.branch }}
-          STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_TOKEN }}
-      - name: Test E2E
-        run: npm run test:e2e
-        id: test-e2e
       - name: Upload test results
         uses: actions/upload-artifact@v2
         with:
-          name: coverage-${{ matrix.node }}
+          name: coverage-${{ matrix.os }}-${{ matrix.node }}
           path: coverage
           retention-days: 1
   quality:
@@ -63,7 +57,7 @@ jobs:
       - name: Download test results
         uses: actions/download-artifact@v2
         with:
-          name: coverage-15.2.0
+          name: coverage-ubuntu-latest-15.2.0
           path: coverage
       - name: Coveralls
         uses: coverallsapp/github-action@master
