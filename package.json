@@ -24,9 +24,8 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint src",
-    "test": "mocha-sinon-chai --istanbul --include-all-sources --print=detail --mocha --recursive test",
-    "check-coverage": "msc-istanbul check-coverage --statements=100 --lines=100 --branches=100 --functions=100",
-    "test:unit": "npm run test && npm run check-coverage",
+    "test": "jest",
+    "test:unit": "npm run test",
     "lint-staged": "lint-staged"
   },
   "peerDependencies": {
@@ -37,8 +36,8 @@
     "eslint-config-prettier": "7.1.0",
     "eslint-plugin-prettier": "3.2.0",
     "husky": "4.3.5",
+    "jest": "26.6.3",
     "lint-staged": "10.0.3",
-    "mocha-sinon-chai": "3.0.0",
     "prettier": "2.2.1"
   },
   "lint-staged": {
