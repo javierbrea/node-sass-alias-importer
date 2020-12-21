@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - chore(deps): Update devDependencies
 - style(lint): Adapt code to new prettier version
 ### Fixed
+- fix: Define imports on Windows using also / as path separator (#22)
 ### Removed
 ### BREAKING CHANGES
 
