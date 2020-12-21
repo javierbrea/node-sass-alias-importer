@@ -23,24 +23,23 @@
   ],
   "main": "src/index.js",
   "scripts": {
-    "coveralls": "cat ./coverage/lcov.info | coveralls",
     "lint": "eslint src",
     "test": "mocha-sinon-chai --istanbul --include-all-sources --print=detail --mocha --recursive test",
     "check-coverage": "msc-istanbul check-coverage --statements=100 --lines=100 --branches=100 --functions=100",
-    "test:coverage": "npm run test && npm run check-coverage",
-    "test:ci": "npm run test:coverage",
+    "test:unit": "npm run test && npm run check-coverage",
     "lint-staged": "lint-staged"
   },
+  "peerDependencies": {
+    "node-sass": "4.x || 5.x"
+  },
   "devDependencies": {
-    "coveralls": "3.0.9",
-    "eslint": "6.8.0",
-    "eslint-config-prettier": "6.10.0",
-    "eslint-plugin-prettier": "3.1.2",
-    "husky": "4.2.1",
+    "eslint": "7.16.0",
+    "eslint-config-prettier": "7.1.0",
+    "eslint-plugin-prettier": "3.2.0",
+    "husky": "4.3.5",
     "lint-staged": "10.0.3",
     "mocha-sinon-chai": "3.0.0",
-    "node-sass": "4.13.0",
-    "prettier": "1.19.1"
+    "prettier": "2.2.1"
   },
   "lint-staged": {
     "src/**/*.js": "eslint"
@@ -51,6 +50,6 @@
     }
   },
   "engines": {
-    "node": "10.x || 12.x || 13.x"
+    "node": "10.x || 12.x || 14.x || 15.x"
   }
 }

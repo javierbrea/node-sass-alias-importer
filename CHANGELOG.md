@@ -6,9 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 ### Added
+- chore(ci): Run tests in Windows OS in pipeline
 ### Changed
+- chore(ci): Migrate from Travis CI to GitHub actions
+- chore(deps): Support all Node.js releases that have not passed their end date
+- chore(deps): Update devDependencies
+- style(lint): Adapt code to new prettier version
 ### Fixed
-- Fix LICENSE link in README file
+- fix: Define imports on Windows using also / as path separator (#22)
 ### Removed
 ### BREAKING CHANGES
 
