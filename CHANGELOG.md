@@ -20,6 +20,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - chore(deps): Support all Node.js releases that have not passed their end date
 - chore(deps): Update devDependencies
 - style(lint): Adapt code to new prettier version
+- test(unit): Use Jest for unit tests
+- chore(Sonar): Update Sonar config
 
 ### Fixed
 - fix: Define imports on Windows using also / as path separator (#22)
