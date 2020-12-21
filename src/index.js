@@ -15,7 +15,7 @@ const aliasImporter = (aliases, options = {}) => {
         done({
           file: url.replace(
             aliasDetails.alias,
-            path.relative(prev, aliasDetails.path).replace(`..${path.sep}`, "")
+            path.normalize(path.relative(prev, aliasDetails.path).replace(`..${path.sep}`, ""))
           ),
         });
       }
