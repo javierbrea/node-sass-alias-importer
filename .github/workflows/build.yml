@@ -2,9 +2,8 @@ name: build
 on:
   push:
     branches:
-      - main
+      - master
       - release
-      - fix-22-windows-paths
   pull_request:
 jobs:
   test:
