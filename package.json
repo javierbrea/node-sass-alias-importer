@@ -30,7 +30,7 @@
     "lint-staged": "lint-staged"
   },
   "peerDependencies": {
-    "node-sass": "4.x"
+    "node-sass": "4.x || 5.x"
   },
   "devDependencies": {
     "eslint": "7.16.0",
