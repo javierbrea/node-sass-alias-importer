@@ -133,7 +133,7 @@ MIT, see [LICENSE](./LICENSE) for details.
 [npm-downloads-url]: https://www.npmjs.com/package/node-sass-alias-importer
 [npm-dependencies-image]: https://img.shields.io/david/javierbrea/node-sass-alias-importer.svg
 [npm-dependencies-url]: https://david-dm.org/javierbrea/node-sass-alias-importer
-[quality-gate-image]: https://sonarcloud.io/api/project_badges/measure?project=node-sass-alias-importer&metric=alert_status
-[quality-gate-url]: https://sonarcloud.io/dashboard?id=node-sass-alias-importer
+[quality-gate-image]: https://sonarcloud.io/api/project_badges/measure?project=javierbrea_node-sass-alias-importer&metric=alert_status
+[quality-gate-url]: https://sonarcloud.io/dashboard?id=javierbrea_node-sass-alias-importer
 [release-image]: https://img.shields.io/github/release-date/javierbrea/node-sass-alias-importer.svg
 [release-url]: https://github.com/javierbrea/node-sass-alias-importer/releases
