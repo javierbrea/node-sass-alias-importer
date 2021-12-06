@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - chore(#36): Support Node versions greater than 10.0.0
 - chore(engines): Use NodeJs 16 and 17 to run tests in Windows in the workflow
 - refactor: Refactor to make the code simpler
+- chore(deps): Update devDependencies
 
 ## [1.0.3] - 2021-12-06
 
