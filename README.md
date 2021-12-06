@@ -1,6 +1,6 @@
 [![Build status][build-image]][build-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Quality Gate][quality-gate-image]][quality-gate-url]
 
-[![NPM dependencies][npm-dependencies-image]][npm-dependencies-url] [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com) [![Last commit][last-commit-image]][last-commit-url] [![Last release][release-image]][release-url] 
+[![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com) [![Last commit][last-commit-image]][last-commit-url] [![Last release][release-image]][release-url] 
 
 [![NPM downloads][npm-downloads-image]][npm-downloads-url] [![License][license-image]][license-url]
 
@@ -131,8 +131,6 @@ MIT, see [LICENSE](./LICENSE) for details.
 [license-url]: https://github.com/javierbrea/node-sass-alias-importer/blob/master/LICENSE
 [npm-downloads-image]: https://img.shields.io/npm/dm/node-sass-alias-importer.svg
 [npm-downloads-url]: https://www.npmjs.com/package/node-sass-alias-importer
-[npm-dependencies-image]: https://img.shields.io/david/javierbrea/node-sass-alias-importer.svg
-[npm-dependencies-url]: https://david-dm.org/javierbrea/node-sass-alias-importer
 [quality-gate-image]: https://sonarcloud.io/api/project_badges/measure?project=javierbrea_node-sass-alias-importer&metric=alert_status
 [quality-gate-url]: https://sonarcloud.io/dashboard?id=javierbrea_node-sass-alias-importer
 [release-image]: https://img.shields.io/github/release-date/javierbrea/node-sass-alias-importer.svg

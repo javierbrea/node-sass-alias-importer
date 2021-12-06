@@ -22,6 +22,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - refactor: Refactor to make the code simpler
 - chore(deps): Update devDependencies
 
+### Removed
+- docs: Remove broken npm dependencies badge
+
 ## [1.0.3] - 2021-12-06
 
 ### Changed
