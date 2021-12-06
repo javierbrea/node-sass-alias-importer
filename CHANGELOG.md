@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 ### BREAKING CHANGES
 
+## [1.0.3] - 2021-12-06
+
+### Changed
+- chore(deps): Update devDependencies
+- chore: Support any NodeJS version greater than 12.0.0
+- test: Update NodeJS versions used in workflows
+
 ## [1.0.2] - 2021-05-29
 
 ### Changed
