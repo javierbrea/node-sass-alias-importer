@@ -11,12 +11,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 ### BREAKING CHANGES
 
-## [unreleased]
+## [1.1.0] - 2021-12-06
 
 ### Added
 - feat(#37). Support not defining a done callback. This happens when node-sass works in sync mode.
 
 ### Changed
+- chore(#36): Support Node versions greater than 10.0.0
+- chore(engines): Use NodeJs 16 and 17 to run tests in Windows in the workflow
 - refactor: Refactor to make the code simpler
 
 ## [1.0.3] - 2021-12-06
