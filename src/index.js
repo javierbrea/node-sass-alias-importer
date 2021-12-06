@@ -8,16 +8,16 @@ const aliasImporter = (aliases, options = {}) => {
     path: path.resolve(options.root || process.cwd(), aliases[alias]),
   }));
   return (url, prev, done) => {
-    const isAsyncMode = typeof done === 'function';
+    const isAsyncMode = typeof done === "function";
     let result = null;
     aliasesDetails.forEach((aliasDetails) => {
       if (!result && url.split(IMPORTS_PATH_SEP)[0] === aliasDetails.alias) {
         result = {
           file: path.normalize(
-              url.replace(
-                  aliasDetails.alias,
-                  path.relative(prev, aliasDetails.path).replace(`..${path.sep}`, "")
-              )
+            url.replace(
+              aliasDetails.alias,
+              path.relative(prev, aliasDetails.path).replace(`..${path.sep}`, "")
+            )
           ),
         };
       }
