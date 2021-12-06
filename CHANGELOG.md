@@ -11,6 +11,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 ### BREAKING CHANGES
 
+## [unreleased]
+
+### Added
+- feat(#37). Support not defining a done callback. This happens when node-sass works in sync mode.
+
+### Changed
+- refactor: Refactor to make the code simpler
+
 ## [1.0.3] - 2021-12-06
 
 ### Changed

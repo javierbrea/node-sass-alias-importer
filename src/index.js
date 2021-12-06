@@ -8,25 +8,30 @@ const aliasImporter = (aliases, options = {}) => {
     path: path.resolve(options.root || process.cwd(), aliases[alias]),
   }));
   return (url, prev, done) => {
-    let aliasFound = false;
-    aliasesDetails.forEach((aliasDetails) => {
-      if (!aliasFound && url.split(IMPORTS_PATH_SEP)[0] === aliasDetails.alias) {
-        aliasFound = true;
-        done({
-          file: path.normalize(
-            url.replace(
-              aliasDetails.alias,
-              path.relative(prev, aliasDetails.path).replace(`..${path.sep}`, "")
-            )
-          ),
-        });
-      }
+    const isSyncMode = typeof done !== "function";
+    let result = {
+      file: url,
+    };
+
+    const aliasFound = aliasesDetails.find((aliasDetails) => {
+      return url.split(IMPORTS_PATH_SEP)[0] === aliasDetails.alias;
     });
-    if (!aliasFound) {
-      done({
-        file: url,
-      });
+
+    if (aliasFound) {
+      result = {
+        file: path.normalize(
+          url.replace(
+            aliasFound.alias,
+            path.relative(prev, aliasFound.path).replace(`..${path.sep}`, "")
+          )
+        ),
+      };
     }
+
+    if (isSyncMode) {
+      return result;
+    }
+    done(result);
   };
 };
 
