@@ -7,11 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - run: npm ci
     # Setup .npmrc file to publish to GitHub Packages
     - uses: actions/setup-node@v2
       with:
-        node-version: '14.x'
+        node-version: '16.x'
         registry-url: 'https://npm.pkg.github.com'
         # Defaults to the user or organization that owns the workflow file
         scope: '@javierbrea'
@@ -20,6 +19,7 @@ jobs:
         filename: './package.json'
         key: 'name'
         value: '@javierbrea/node-sass-alias-importer'
+    - run: npm ci
     - run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
