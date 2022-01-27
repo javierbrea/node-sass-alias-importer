@@ -30,7 +30,7 @@
     "prepare": "husky install"
   },
   "peerDependencies": {
-    "node-sass": "4.x || 5.x"
+    "node-sass": "4.x || 5.x || 7.x"
   },
   "devDependencies": {
     "eslint": "8.4.0",
