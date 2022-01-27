@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 ### BREAKING CHANGES
 
+## [1.2.0] - 2022-01-27
+
+### Changed
+- chore(#44): Add peerDependenciesMeta to make node-sass optional
+- chore(deps): Update devDependencies
+- chore: Use Node 16 in workflows
+
 ## [1.1.0] - 2021-12-06
 
 ### Added
