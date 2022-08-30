@@ -11,6 +11,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 ### BREAKING CHANGES
 
+## [2.0.0] - 2022-08-30
+
+### Added
+- docs: Add Webpack config alternative to docs
+
+### Changed
+- chore(deps): Update devDependencies
+
+### Removed
+- chore: Drop support for Node.js 10.x and 12.x. Add tests using Node.js 18.x.
+
 ## [1.2.0] - 2022-01-27
 
 ### Changed
