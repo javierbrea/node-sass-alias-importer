@@ -117,6 +117,29 @@ module.exports = () => ({
 });
 ```
 
+## Alternatives
+
+### Webpack
+
+If you are using Webpack and [sass-loader](https://github.com/webpack-contrib/sass-loader), you can use the Webpack's `resolve.alias` option directly:
+
+```js
+// webpack.config.js
+
+module.exports = {
+  //...
+  resolve: {
+    alias: {
+      themes: path.resolve(__dirname, "src/styles/themes"),
+      variables: path.resolve(__dirname, "src/styles/variables/index")
+    },
+  },
+};
+
+```
+
+
+
 ## License
 
 MIT, see [LICENSE](./LICENSE) for details.

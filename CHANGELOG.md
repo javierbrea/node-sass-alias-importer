@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+### Added
+- docs: Add Webpack config alternative to docs
+
 ### Changed
 - chore(deps): Update devDependencies
 
