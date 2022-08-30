@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - chore(deps): Update devDependencies
+- chore: Drop support for Node.js 12.x. Add tests using Node.js 18.x.
 
 ## [1.2.0] - 2022-01-27
 
