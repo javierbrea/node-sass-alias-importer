@@ -1,7 +1,7 @@
 {
   "name": "node-sass-alias-importer",
   "description": "Node sass importer supporting custom alias for directories or specific files",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "keywords": [
     "node-sass",
     "sass",
@@ -38,14 +38,14 @@
     }
   },
   "devDependencies": {
-    "eslint": "8.37.0",
-    "eslint-config-prettier": "8.8.0",
-    "eslint-plugin-prettier": "4.2.1",
+    "eslint": "8.47.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-prettier": "5.0.0",
     "husky": "8.0.3",
     "is-ci": "3.0.1",
-    "jest": "29.5.0",
-    "lint-staged": "13.2.0",
-    "prettier": "2.8.7"
+    "jest": "29.6.2",
+    "lint-staged": "14.0.0",
+    "prettier": "3.0.2"
   },
   "lint-staged": {
     "src/**/*.js": "eslint"
