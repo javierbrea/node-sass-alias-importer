@@ -1,4 +1,4 @@
-1name: check-package-version
+name: check-package-version
 on:
   pull_request:
     branches:
