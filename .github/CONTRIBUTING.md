@@ -1,3 +1,6 @@
+> [!WARNING]
+> **This project is archived and no longer maintained.**
+
 # Contributing
 
 First off, thanks for taking the time to contribute!
