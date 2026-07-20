@@ -1,3 +1,15 @@
+> [!WARNING]
+> **This project is archived and no longer maintained.**
+>
+> It targets [`node-sass`](https://www.npmjs.com/package/node-sass), which is **deprecated** (LibSass is no longer developed), and it relies on the **legacy Sass importer API**, which has been removed from modern Dart Sass. For new or migrating projects, prefer one of the modern alternatives below.
+>
+> **Modern alternatives:**
+> - **Migrate to [Dart Sass](https://sass-lang.com/dart-sass/)** (`sass` or `sass-embedded`) — the reference Sass implementation that replaces the deprecated `node-sass`.
+> - **[Sass load paths](https://sass-lang.com/documentation/cli/dart-sass/#load-path)** — pass `loadPaths` to the compiler (or `--load-path` on the CLI) so bare import prefixes resolve to your style directories. The built-in equivalent of directory aliases.
+> - **[`pkg:` importer / `NodePackageImporter`](https://sass-lang.com/documentation/at-rules/use/#loading-a-module-from-a-package)** — Dart Sass's built-in importer for resolving stylesheets shipped inside npm packages.
+> - **Bundler-level aliases** — resolve aliases at the bundler instead of in Sass: Vite [`resolve.alias`](https://vite.dev/config/shared-options.html#resolve-alias), Webpack [`resolve.alias`](https://webpack.js.org/configuration/resolve/#resolvealias) (see the *Alternatives* section below), esbuild, etc.
+> - **Custom modern importers** — for programmatic alias resolution, implement a [`FileImporter`](https://sass-lang.com/documentation/js-api/interfaces/fileimporter/) with the modern `compile` / `compileAsync` JS API.
+
 [![Build status][build-image]][build-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Quality Gate][quality-gate-image]][quality-gate-url]
 
 [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com) [![Last commit][last-commit-image]][last-commit-url] [![Last release][release-image]][release-url] 
