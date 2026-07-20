@@ -1,8 +1,7 @@
-[![Build status][build-image]][build-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Quality Gate][quality-gate-image]][quality-gate-url]
-
-[![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com) [![Last commit][last-commit-image]][last-commit-url] [![Last release][release-image]][release-url] 
-
-[![NPM downloads][npm-downloads-image]][npm-downloads-url] [![License][license-image]][license-url]
+> [!WARNING]
+> **This project is archived and no longer maintained.**
+>
+> It targets [`node-sass`](https://www.npmjs.com/package/node-sass), which is **deprecated** (LibSass is no longer developed), and it relies on the **legacy Sass importer API**, which has been removed from modern Dart Sass. For new or migrating projects, prefer one of the [modern alternatives below](#alternatives).
 
 # Node Sass Alias Importer
 
@@ -119,9 +118,17 @@ module.exports = () => ({
 
 ## Alternatives
 
-### Webpack
+### Dart Sass
 
-If you are using Webpack and [sass-loader](https://github.com/webpack-contrib/sass-loader), you can use the Webpack's `resolve.alias` option directly:
+Migrate to [Dart Sass](https://sass-lang.com/dart-sass/) (`sass` or `sass-embedded`) — the reference Sass implementation that replaces the deprecated `node-sass`.
+
+### Sass load paths
+
+[Sass load paths](https://sass-lang.com/documentation/cli/dart-sass/#load-path) — pass `loadPaths` to the compiler (or `--load-path` on the CLI) so bare import prefixes resolve to your style directories. The built-in equivalent of directory aliases.
+
+### Bundler-level aliases
+
+Resolve aliases at the bundler instead of in Sass: Vite [`resolve.alias`](https://vite.dev/config/shared-options.html#resolve-alias), Webpack [`resolve.alias`](https://webpack.js.org/configuration/resolve/#resolvealias), esbuild, etc.
 
 ```js
 // webpack.config.js
@@ -138,7 +145,13 @@ module.exports = {
 
 ```
 
+### `pkg:` importer / `NodePackageImporter`
 
+The [`pkg:` importer / `NodePackageImporter`](https://sass-lang.com/documentation/at-rules/use/#loading-a-module-from-a-package) is Dart Sass's built-in importer for resolving stylesheets shipped inside npm packages.
+
+### Custom modern importers
+
+For programmatic alias resolution, implement a [`FileImporter`](https://sass-lang.com/documentation/js-api/interfaces/fileimporter/) with the modern `compile` / `compileAsync` JS API.
 
 ## License
 

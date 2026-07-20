@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 ### BREAKING CHANGES
 
+## [Deprecated] - 2026-07-20
+
+### Changed
+
+- docs: Add warning about the project being archived and no longer maintained. Add alternatives.
+
 ## [2.0.4] - 2023-11-21
 
 ### Changed
